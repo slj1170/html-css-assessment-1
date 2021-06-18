@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after 
+  box-sizing: border-box
+
+body,
+h1,
+h2,
+h3,
+p 
+  margin: 0
+
+h1,
+h2,
+h3,
+h4
+    line-height: 1
+
+h2,
+h3,
+h4,
+p
+    margin-bottom: 1em
+
+$font-primary: Cabin, sans-serif
+$font-secondary: Open Sans, sans-serif
+$font-weight-light: 400
+$font-weight-bold: 600
+$font-weight-bold-x: 700
+$font-size-primary: 18px
+$bg-primary: white
+$bg-secondary: #F3FBFF
+$btn-bg-primary: #FFC327
+
+section
+    padding: 3rem 0
+
+.container
+    margin-inline: auto
+    width: min(90%, 70.5rem)
+
+.split
+    display: flex
+    flex-direction: column
+
+.split_links
+    display: flex
+    justify-content: space-evenly
+    flex-flow: row wrap
+
+    
+.form-section
+    form
+        select,input
+            margin-top: 1em
+
+@media (min-width: 40em)
+    .split
+        flex-direction: row
+    .split > *
+        flex-basis: 100%
+    .split > * + *
+        margin-left: 1.5rem
+    .laptop_view
+        display: flex
+        justify-content: space-evenly
+        flex-flow: row wrap
+
+@media screen and ( min-width: 40.06em ) and (max-width: 63.93em)
+    .links
+        .split_links
+            .anchor_text1,
+            .anchor_text2,
+            .anchor_text3
+                flex-basis: 24% !important
+            .anchor_text4,
+            .anchor_text5
+                flex-basis: 35% !important
+                margin-top: 1.5em
+    .laptop_view
+        .form-label
+            flex-basis: 100%
+        .tablet_view
+            flex-basis: 50%
+        .btn_search--laptop
+            flex-basis: 22%
+        .form-options
+            width: 100%
+        .btn_search--tablet
+            width: 25%
+
+@media (min-width: 64em)
+    .container--wider
+        width: min(95%, 80.5rem)
+    .links
+        .split_links
+            .anchor_text1,
+            .anchor_text2,
+            .anchor_text3
+                flex-basis: 17% !important
+            .anchor_text4,
+            .anchor_text5
+                flex-basis: 24% !important
+                margin-top: 0 !important
+    .form-section
+        label
+            font-size: 20px
+        form
+            select,input
+                margin-top: 0
+    .laptop_view
+        .form-label
+            flex-basis: 29%
+            text-align: left !important
+            .subText
+                text-align: left
+        .tablet_view
+            flex-basis: 40%
+        .btn_search--laptop
+            flex-basis: 20%
+        .btn_search--tablet
+            display: none
+    
+svg
+    padding: auto
+    max-width: 100%
+    margin-top: 1em
+
+.container--narrow
+    max-width: 35rem
+
+.text-center
+    text-align: center
+
+label
+    font-size: 22px
+    font-weight: 700
+
+span
+    font-size: 13px
+    font-weight: 400
+
+
+body
+    font-family: $font-primary
+    header
+        .header_text
+            margin-top: 1em
+        h3
+            font-weight: $font-weight-light
+            font-size: $font-size-primary
+    .links
+        padding-top: 0
+        a
+            font-weight: $font-weight-bold
+            font-size: $font-size-primary
+            color: black
+        .split_links
+            .anchor_text1,
+            .anchor_text2,
+            .anchor_text3
+                flex-basis: 24%
+            .anchor_text4,
+            .anchor_text5
+                flex-basis: 32%
+                margin-top: 1.5em
+    hr
+        border: 1px solid #0A162B
+    .form-section
+        form
+            select,input
+                width: 100%
+                height: 3.4rem
+                font-size: $font-size-primary
+                line-height: 1
+        select
+            border: 2px solid #D0D0D0
+            box-sizing: border-box
+            border-radius: 5px
+            font-family: cabin, sans-serif
+            font-weight: 400
+            padding-left: 1em
+        input[type="submit"]
+            border: 0
+            box-shadow: none
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), $btn-bg-primary
+            background-blend-mode: overlay, normal
+            border-radius: 30px
+            font-weight: $font-weight-bold-x
+    .card-section
+        background-color: $bg-secondary
+        font-size: $font-size-primary
+        .card-section-title
+            h2
+                font-family: $font-secondary
+                text-transform: uppercase
+        .card
+            background-color: white
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05)
+            border-radius: 10px
+            margin-bottom: 1.5em
+
+            h4
+                font-size: 18px
+            
+            p
+                line-height: 1.6
+    
+    
